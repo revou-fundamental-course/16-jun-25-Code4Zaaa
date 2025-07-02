@@ -8,10 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     locations.forEach(location => {
         const div = document.createElement("div");
+        div.className = "flex flex-col items-center w-32 sm:w-40 text-center"; 
+
         div.innerHTML = `
-            <img src="${location.image}" alt="${location.name}" class="w-24 h-24 mx-auto rounded-full border">
-            <p class="mt-2">${location.name}</p>
+            <img src="${location.image}" alt="${location.name}" class="w-24 h-24 object-cover rounded-full border shadow-md" />
+            <p class="mt-2 text-sm sm:text-base font-medium text-gray-700">${location.name}</p>
         `;
+
         headquarter.appendChild(div);
     });
 
