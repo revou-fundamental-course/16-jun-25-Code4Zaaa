@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white font-sans">
+    <header class="flex justify-between items-center px-6 py-4 border-b">
+        <div class="text-2xl font-bold">Made With 🤍</div>
+        <nav class="space-x-4">
+            <a href="#home" class="text-gray-700 hover:underline">Home</a>
+            <a href="#profile" class="text-gray-700 hover:underline">Our Profile</a>
+            <a href="#contact" class="text-gray-700 hover:underline">Message Us</a>
+        </nav>
+    </header>
+
+    <section id="home" class="py-12 px-6 bg-white">
+        <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+            <div class="md:w-1/2 text-left">
+                <h1 class="text-3xl font-semibold">Hi <span id="userName">Vriza</span>, Welcome To Website</h1>
+                <p class="mt-2 text-gray-600">ini adalah website latihan pertama</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-100 text-center">
+        <h2 class="text-2xl font-semibold mb-8">Our Headquarter</h2>
+        <div id="headquarter" class="flex justify-center gap-12"></div>
+    </section>
+
+    <section id="contact" class="py-12 px-6">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Message Us</h2>
+        <form id="messageForm" class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <input type="text" id="name" placeholder="Your Name" class="w-full p-2 border rounded" />
+                <input type="email" id="email" placeholder="Your Email" class="w-full p-2 border rounded" />
+                <input type="tel" id="phone" placeholder="Your Phone" class="w-full p-2 border rounded" />
+                <select id="category" class="w-full p-2 border rounded">
+                    <option value="">-- Select Category --</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Information">Information</option>
+                </select>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+            </div>
+
+            <div class="border p-4 rounded" id="formOutput">
+                <p class="text-gray-500 text-sm">Output form: (Akan muncul di sini setelah form disubmit)</p>
+            </div>
+        </form>
+    </section>
+
+    <footer class="text-center text-sm py-4 border-t">
+        Created by Vriza
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
